@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weather</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onkeyup="whichButton(event)">
+    <main>
+        <div id="input">
+            <input type="text" id="search" placeholder="Search...">
+            <p id="errorMessage"></p>
+        </div>
+        <div id="errorMessageGif">
+            <img src="images/doh-clipart-oops-12.gif" alt="">
+        </div>
+        <section id="section1">
+            <div class="today">
+                <span>
+                    <span id="weekdays"></span>
+                    <span id="dt"></span>
+                </span>
+                <span id="city"></span>
+                <span>
+                    <span id="temp"></span>
+                    <span><img alt="" id="tempIcon"></span>
+                </span>
+                <span>
+                    <span id="humidity"></span>
+                    <span id="description"></span>
+                </span>
+            </div>
+
+                <label>
+                    <input type="radio" onclick="hours(1)" id="radio_div_1" name="radio_div">
+                    <div class="nextDays"  id="nextDays_1">
+                        <span  id="nextDay_1" class="even"></span>
+                        <span>
+                            <span><img  id="nextDay_tempIcon_1" alt=""></span>
+                            <span id="nextDay_temp_1"></span>
+                            <span id="nextDay_humidity_1"></span>
+                            <span id="nextDay_description_1"></span>
+                        </span>
+                    </div>
+                </label>
+
+                <label>
+                    <input type="radio" onclick="hours(2)"  id="radio_div_2" name="radio_div">
+                    <div class="nextDays" id="nextDays_2">
+                        <span  id="nextDay_2" class="add"></span>
+                        <span>
+                            <span><img  id="nextDay_tempIcon_2" alt=""></span>
+                            <span id="nextDay_temp_2"></span>
+                            <span id="nextDay_humidity_2"></span>
+                            <span id="nextDay_description_2"></span>
+                        </span>
+                    </div>
+                </label>   
+                
+                <label>
+                    <input type="radio" onclick="hours(3)"  id="radio_div_3" name="radio_div">
+                    <div class="nextDays" id="nextDays_3">
+                        <span  id="nextDay_3" class="even"></span>
+                        <span>
+                            <span><img  id="nextDay_tempIcon_3" alt=""></span>
+                            <span id="nextDay_temp_3"></span>
+                            <span id="nextDay_humidity_3"></span>
+                            <span id="nextDay_description_3"></span>
+                        </span>
+                    </div>
+                </label>     
+
+                <label>
+                    <input type="radio" onclick="hours(4)"  id="radio_div_4" name="radio_div">
+                    <div class="nextDays" id="nextDays_4">
+                        <span  id="nextDay_4" class="add"></span>
+                        <span>
+                            <span><img  id="nextDay_tempIcon_4" alt=""></span>
+                            <span id="nextDay_temp_4"></span>
+                            <span id="nextDay_humidity_4"></span>
+                            <span id="nextDay_description_4"></span>
+                        </span>
+                    </div>
+                </label>
+
+                <label>
+                    <input type="radio"  onclick="hours(5)" id="radio_div_5" name="radio_div">
+                    <div class="nextDays" id="nextDays_5">
+                        <span  id="nextDay_5" class="even"></span>
+                        <span>
+                            <span><img  id="nextDay_tempIcon_5" alt=""></span>
+                            <span id="nextDay_temp_5"></span>
+                            <span id="nextDay_humidity_5"></span>
+                            <span id="nextDay_description_5"></span>
+                        </span>
+                    </div>
+                </label>
+
+        </section>
+
+        <section id="section2">
+
+            <div>
+                <span id="hours_1"></span>
+                <span>
+                    <span><img id="hours_tempIcon_1" alt=""></span>
+                    <span id="hours_temp_1"></span>
+                    <span id="hours_humidity_1"></span>
+                </span>
+                <span id="hours_description_1"></span>
+            </div>
+
+            <div>
+                <span id="hours_2"></span>
+                <span>
+                    <span><img id="hours_tempIcon_2" alt=""></span>
+                    <span id="hours_temp_2"></span>
+                    <span id="hours_humidity_2"></span>
+                </span>
+                <span id="hours_description_2"></span>
+            </div>
+
+            <div>
+                <span id="hours_3"></span>
+                <span>
+                    <span><img id="hours_tempIcon_3" alt=""></span>
+                    <span id="hours_temp_3"></span>
+                    <span id="hours_humidity_3"></span>
+                </span>
+                <span id="hours_description_3"></span>
+            </div>
+
+            <div>
+                <span id="hours_4"></span>
+                <span>
+                    <span><img id="hours_tempIcon_4" alt=""></span>
+                    <span id="hours_temp_4"></span>
+                    <span id="hours_humidity_4"></span>
+                </span>
+                <span id="hours_description_4"></span>
+            </div>
+
+            <div>
+                <span id="hours_5"></span>
+                <span>
+                    <span><img id="hours_tempIcon_5" alt=""></span>
+                    <span id="hours_temp_5"></span>
+                    <span id="hours_humidity_5"></span>
+                </span>
+                <span id="hours_description_5"></span>
+            </div>
+
+            <div>
+                <span id="hours_6"></span>
+                <span>
+                    <span><img id="hours_tempIcon_6" alt=""></span>
+                    <span id="hours_temp_6"></span>
+                    <span id="hours_humidity_6"></span>
+                </span>
+                <span id="hours_description_6"></span>
+            </div>
+
+            <div>
+                <span id="hours_7"></span>
+                <span>
+                    <span><img id="hours_tempIcon_7" alt=""></span>
+                    <span id="hours_temp_7"></span>
+                    <span id="hours_humidity_7"></span>
+                </span>
+                <span id="hours_description_7"></span>
+            </div>
+
+            <div>
+                <span id="hours_8"></span>
+                <span>
+                    <span><img id="hours_tempIcon_8" alt=""></span>
+                    <span id="hours_temp_8"></span>
+                    <span id="hours_humidity_8"></span>
+                </span>
+                <span id="hours_description_8"></span>
+            </div>
+        </section>
+    </main>
+    <ul id="root"></ul>
+    <script src="js/js.js"></script>
+</body>
+</html>
